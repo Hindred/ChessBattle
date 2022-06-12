@@ -1,0 +1,19 @@
+:root {
+    --dark: #16191c;
+    --dark-x: #1e2126;
+    --light: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: var(--light);
+}
+
+.bg-dark { background-color: var(--dark) !important; }
+.bg-dark-x { background-color: var(--dark-x); }
+
+.form-control, .btn {
+    min-height: 3.150rem;
+    line-height: initial;
+}
