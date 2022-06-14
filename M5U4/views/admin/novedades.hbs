@@ -1,0 +1,61 @@
+<div class="container bg-white" style="margin-top: 150px;">
+    <div class="row">
+        <div class="col pt-3">
+            <p class="text-end">
+                <span class="text-dark p-2">Hola {{usuario}}</span>
+                <a href="/admin/adminlog/logout" class="btn btn-danger">Cerrar sesion <i
+                        class="fas fa-sign-out-alt"></i></a>
+            </p>
+        </div>
+        <div class="row mb-3">
+            <div class="col-5">
+                <h2 class="text-dark">Listado de novedades</h2>
+            </div>
+            <div class="col-5 text-end">
+                <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus"></i>
+                    Nuevo</a>
+            </div>
+            <div class="col-2">
+                <form class="form-inline my-2 my-lg-0" action="/admin/novedades" method="get">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"
+                        {{#if q}}value="{{q}}"{{/if}}>
+                    <button class="btn btn-secondary py-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            {{#if is_search}}
+            {{#unless novedades.length}}
+            No se encontraron resultados para "<strong>{{q}}</strong>"
+            {{/unless}}
+            {{/if}}
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">#</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col" class="text-end">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each novedades}}
+                        <tr>
+                            <td scope="row">{{id}}</td>
+                            <td>{{titulo}}</td>
+                            <td>{{{imagen}}}</td>
+                            <td class="text-end">
+                                <a href="/admin/novedades/modificar/{{id}}" class="btn tn-secondary"><i
+                                        class="fas fa-pencil-alt"></i></a>
+                                <a href="/admin/novedades/eliminar/{{id}} " class="btn tn-secondary"><i
+                                        class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.carousel-inner{
+    max-height: 39rem;
+}
+
+.color{
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.colorNuevo{
+    width: 270px;
+    height: auto;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.color-carousel{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+    display: block;
+}
+
+.color-carousel img, .color img, .colorNuevo img, .modal-body img{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.colorido{
+    color: #9c9c9c;
+}
+
+.vivo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 57px;
+    height: 20px;
+    background-color: #313131;
+    border-radius: 10px;
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+.nuevo{
+    background-color: #323232;
+}
+
+.nuevito{
+    background-color: #282828;
+}
+
+.eQ{
+    text-decoration: none;
+    display: block;
+    margin-top: 1rem;
+}
