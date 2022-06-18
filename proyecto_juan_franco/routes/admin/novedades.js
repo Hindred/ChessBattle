@@ -10,6 +10,7 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
+
   var novedades 
   if (req.query.q === undefined) {
     novedades = await novedadesModel.getNovedades();
@@ -17,7 +18,7 @@ router.get('/', async function (req, res, next) {
     novedades = await novedadesModel.buscarNovedades(req.query.q);
   }
 
-  var novedades = await novedadesModel.getNovedades();
+  // var novedades = await novedadesModel.getNovedades();
 
 
   novedades = novedades.map(novedad => {
